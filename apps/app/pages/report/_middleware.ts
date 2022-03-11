@@ -10,6 +10,9 @@ export default function middleware(
   console.log(JSON.stringify(request.ua));
   console.log(JSON.stringify(request.headers));
   return NextResponse.json({
-    yo : 'asdf'
+    geo: request.geo,
+    ip: request.ip,
+    ua: request.ua,
+    headers: request.headers,
   })
 }
