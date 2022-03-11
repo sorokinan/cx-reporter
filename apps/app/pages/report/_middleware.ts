@@ -9,10 +9,5 @@ export default function middleware(
   console.log(JSON.stringify(request.ip));
   console.log(JSON.stringify(request.ua));
   console.log(JSON.stringify(request.headers));
-  return NextResponse.json({
-    geo: request.geo,
-    ip: request.ip,
-    ua: request.ua,
-    headers: request.headers,
-  })
+  return NextResponse.next()
 }
